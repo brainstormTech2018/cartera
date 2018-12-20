@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    SIAC
+    Paper Dashboard 2 by Creative Tim
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -23,7 +23,6 @@
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
-
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
@@ -43,7 +42,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="examples/map.html">
+            <a href="customers.html">
               <i class="nc-icon nc-bank"></i>
               <p>Cliente</p>
             </a>
@@ -87,7 +86,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">INVENTARIO</a>
+            <a class="navbar-brand" href="#pablo">Inventario</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,11 +96,10 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-               
-                <input type="text" value="" class="form-control" placeholder="Cliente">
+                <input type="text" value="" class="form-control" placeholder="Search...">
                 <div class="input-group-append">
                   <div class="input-group-text">
-                    <a onclick="cargarCliente();" href=""><i class="nc-icon nc-zoom-split"></i></a>
+                    <i class="nc-icon nc-zoom-split"></i>
                   </div>
                 </div>
               </div>
@@ -140,25 +138,21 @@
           </div>
         </div>
       </nav>
-    </div>
       <!-- End Navbar -->
-      <!-- <div class="panel-header panel-header-lg">
-  
-  <canvas id="bigDashboardChart"></canvas>
+      <!-- <div class="panel-header panel-header-sm">
   
   
 </div> -->
       <div class="content">
-        
+
         <div class="row">
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Registro de productos</h5>
+                <h5 class="card-title">Registro de producto</h5>
               </div>
-              <div class="card-body ">
-                <form>
-                   <div class="row">
+              <div class="card-body">
+              <div class="row">
                     <div class="col-md-1 pr-1">
                       <div class="form-group">
                         <label>Cantidad</label>
@@ -197,78 +191,57 @@
                     </div>
                   </div>
                 </div>
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <a class="btn btn-primary btn-round" onclick="listar();">AÑADIR</a>
-                    </div>
-                  </div>
-                </div>    
+              
+              <div class="row">
+                <div class="update ml-auto mr-auto">
+                  <a class="btn btn-primary btn-round" onclick="listar();">AÑADIR</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Stock</h4>
+              </div>
+              <div class="card-body">
                 <div class="row">
-                      <div class="col-md-12">
-                        <div class="card ">
-                          <div class="card-header ">
-                            <h5 class="card-title">Stock</h5>
-                          </div>
-                          <div class="card-body ">
-                            <div class="table-responsive">
-                              <table class="table">
+                  <div class="col-md-6">
+                    <h5><label>Producto</label>
+                    <select>
+                      <option>Televisor</option>
+                      <option>Nevera</option>
+                    </select></h5>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
                     <thead class=" text-primary">
                       <th>
                         Producto
                       </th>
                       <th>
-                        Cantidad
+                        Referencia
                       </th>
                       <th>
-                        Referencia
+                        Precio
                       </th>
                       <th class="text-right">
                         Stock
-                      </th>
-                      <th class="text-right">
-                        Precio
                       </th>
                     </thead>
                     <tbody>
                       
                     </tbody>
                   </table>
-            
-
-                          </div>
-                        </div>
-                      </div>
-                     </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="card ">
-                            
-                             <div class="update ml-auto mr-auto">
-                                <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
-                             </div>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-               
-              </form>
-
-
-                <!-- fin formulario -->
-
-             
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
+      </div>
       <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
@@ -290,7 +263,7 @@
                 ©
                 <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Brainstorm Tech
+                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
               </span>
             </div>
           </div>
@@ -313,23 +286,6 @@
   <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-      demo.initChartsPages();
-    });
-  </script>
-  <script type="text/javascript">
-    var cargarCliente = function (){
-      alert("Todo bien");
-    }
-
-  </script>
-  <script type="text/javascript">
-    
-    }
-
-  </script>
 </body>
 
 </html>
