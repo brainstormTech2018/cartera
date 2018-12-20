@@ -28,12 +28,12 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="../assets/index.html" class="simple-text logo-mini">
+        <a href="index.html" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../assets/img/logomcm.png">
           </div>
         </a>
-        <a href="../index.html" class="simple-text logo-normal">
+        <a href="index.html" class="simple-text logo-normal">
           
           <div class="logo-image-big">
             <img src="../assets/img/letras.png">
@@ -43,7 +43,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="customers.html">
+            <a href="examples/map.html">
               <i class="nc-icon nc-bank"></i>
               <p>Cliente</p>
             </a>
@@ -87,7 +87,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo">INVENTARIO</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,10 +97,11 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+               
+                <input type="text" value="" class="form-control" placeholder="Cliente">
                 <div class="input-group-append">
                   <div class="input-group-text">
-                    <i class="nc-icon nc-zoom-split"></i>
+                    <a onclick="cargarCliente();" href=""><i class="nc-icon nc-zoom-split"></i></a>
                   </div>
                 </div>
               </div>
@@ -139,6 +140,7 @@
           </div>
         </div>
       </nav>
+    </div>
       <!-- End Navbar -->
       <!-- <div class="panel-header panel-header-lg">
   
@@ -152,228 +154,136 @@
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header ">
-                <h5 class="card-title">Registro de Clientes</h5>
-                
+                <h5 class="card-title">Registro de productos</h5>
               </div>
               <div class="card-body ">
                 <form>
-
-                  <!-- clientes -->
-
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
+                   <div class="row">
+                    <div class="col-md-1 pr-1">
                       <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                        <label>Cantidad</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
-                    <div class="col-md-6 pl-1">
+                    <div class="col-md-2 pr-1">
                       <div class="form-group">
-                        <label>Apellido</label>
-                        <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido"> 
+                        <label>Artículo</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
-                  </div>
-
-                    <!-- Documento -->
-
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
+                    <div class="col-md-2 pr-1">
                       <div class="form-group">
-                        <label>Documento</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                        <label>Marca</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
-                    <div class="col-md-6 pl-1">
+                    <div class="col-md-2 pr-1">
                       <div class="form-group">
-                        <label>Lugar de Expedicion</label>
-                        <input type="text" class="form-control" placeholder="Lugar de Expedicion" id="apellido" name="apellido"> 
+                        <label>Referencia</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
-                  </div>
-
-                    <!-- Direccion y Telefono -->
-
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
+                    <div class="col-md-3 pr-1">
                       <div class="form-group">
-                        <label>Dirección</label>
-                        <input type="text" class="form-control" placeholder="Direccion de Residencia" id="direccion" name="direccion">
+                        <label>Serial</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
-
-                    <div class="col-md-6 pl-1">
+                    <div class="col-md-2 ">
                       <div class="form-group">
-                        <label>Teléfono</label>
-                        <input type="text" class="form-control" placeholder="#" id="Telefono" name="Telefono">
+                        <label>Valor</label>
+                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
                       </div>
                     </div>
                   </div>
-
-                   <!-- correo electronico -->
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Correo</label>
-                        <input type="text" class="form-control" placeholder="Email" id="correo" name="correo">
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Profesion y tiempo -->
-
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>Profesion</label>
-                        <input type="text" class="form-control"  placeholder="Profesion" id="Profesion" name="Profesion">
-                      </div>
-                    </div>
-                    
-                    <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label>Tiempo</label>
-                        <input type="email" class="form-control" placeholder="tiempo" id="tiempo" name="tiempo">
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Lugar de Trabajo  y sueldo -->
-
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>Lugar de Trabajo</label>
-                        <input type="text" class="form-control"  placeholder="Nombre de la Empresa" id="lugarTra" name="lugarTra">
-                      </div>
-                    </div>
-                    
-                    <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label>Sueldo</label>
-                        <input type="email" class="form-control" placeholder="$" id="sueldo" name="sueldo">
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Observaciones -->
-                
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Observaciones</label>
-                        <textarea class="form-control textarea" id="observacion" name="observacion">Considere ingresar datos relevantes sobre el cliente</textarea>
-                      </div>
-                    </div>
-                  </div>
+                </div>
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
+                      <a class="btn btn-primary btn-round" onclick="listar();">AÑADIR</a>
                     </div>
                   </div>
-                </form>
+                </div>    
+                <div class="row">
+                      <div class="col-md-12">
+                        <div class="card ">
+                          <div class="card-header ">
+                            <h5 class="card-title">Stock</h5>
+                          </div>
+                          <div class="card-body ">
+                            <div class="table-responsive">
+                              <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Producto
+                      </th>
+                      <th>
+                        Cantidad
+                      </th>
+                      <th>
+                        Referencia
+                      </th>
+                      <th class="text-right">
+                        Stock
+                      </th>
+                      <th class="text-right">
+                        Precio
+                      </th>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+            
+
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="card ">
+                            
+                             <div class="update ml-auto mr-auto">
+                                <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
+                             </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               
+              </form>
+
 
                 <!-- fin formulario -->
 
+             
               <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                 
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <!-- Card conyugue -->
-
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card ">
-              <div class="card-header ">
-                <h5 class="card-title">Datos Conyugue</h5>
-              </div>
-              <div class="card-body ">
-                <form>
-                   <!-- Nombre y Apellido Conyugue  -->
-                   <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
-                      </div>
-                    </div>
-                    <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label>Apellido</label>
-                        <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido"> 
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Cedula Conyugue  -->
-                  <div class="row">
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label>Cedula</label>
-                        <input type="text" class="form-control"  placeholder="Cedula" id="cedulaCony" name="empresa">
-                      </div>
-                    </div>                    
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Profesion</label>
-                        <input type="email" class="form-control" placeholder="Profesion" id="profesionCony" name="profesionCony">
-                      </div>
-                    </div>
-                     <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Domicilio</label>
-                       <select class="form-control" name="dia" id="dia" required>
-                       <option value="" disabled selected>Elige una opción</option>
-                        <option value="Propia">Propia</option>
-                        <option value="Familiar">Familiar</option>
-                        <option value="Arriendo">Arriendo</option>
-                        <option value="Otros">Otros</option>                                            
-                       </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Observaciones</label>
-                        <textarea class="form-control textarea" id="observacion" name="observacion">Considere ingresar datos relevantes sobre el cliente</textarea>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
-                    </div>
-                  </div>
-                          </div>
-        </div>
-                </form>
-                <!-- fin formulario -->
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">                 
-                </div>
-              </div>
-            </div>
-          
-    
-     
       <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
             <nav class="footer-nav">
-             
+              <ul>
+                <li>
+                  <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
+                </li>
+                <li>
+                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
+                </li>
+                <li>
+                  <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
+                </li>
+              </ul>
             </nav>
             <div class="credits ml-auto">
               <span class="copyright">
@@ -388,7 +298,6 @@
       </footer>
     </div>
   </div>
-</div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -409,6 +318,17 @@
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
       demo.initChartsPages();
     });
+  </script>
+  <script type="text/javascript">
+    var cargarCliente = function (){
+      alert("Todo bien");
+    }
+
+  </script>
+  <script type="text/javascript">
+    
+    }
+
   </script>
 </body>
 
