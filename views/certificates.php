@@ -42,13 +42,13 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="customers.html">
+            <a href="customers.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Cliente</p>
             </a>
          </li>
           <li>
-            <a href="inventory.html">
+            <a href="inventory.php">
               <i class="nc-icon nc-box"></i>
               <p>Inventario</p>
             </a>

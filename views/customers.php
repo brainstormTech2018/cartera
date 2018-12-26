@@ -1,4 +1,9 @@
+
+<?php
+include('../config/config.php');
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -43,13 +48,13 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active">
-            <a href="customers.html">
+            <a href="customers.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Cliente</p>
             </a>
          </li>
           <li>
-            <a href="inventory.html">
+            <a href="inventory.php">
               <i class="nc-icon nc-box"></i>
               <p>Inventario</p>
             </a>
@@ -162,14 +167,14 @@
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                        <label>Nombre 1</label>
+                        <input type="text" class="form-control" placeholder="Nombre" id="u_nombre1" name="u_nombre1">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Apellido</label>
-                        <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido"> 
+                        <label>Nombre 2</label>
+                        <input type="text" class="form-control" placeholder="Nombre" id="u_nombre2" name="u_nombre2"> 
                       </div>
                     </div>
                   </div>
@@ -179,32 +184,46 @@
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
+                        <label>Apellido 1</label>
+                        <input type="text" class="form-control" placeholder="Perez, Martinez" id="u_apellido1" name="u_apellido1">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Apellido 2</label>
+                        <input type="text" class="form-control" placeholder="Perez, Martinez" id="u_apellido2" name="u_apellido2"> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
                         <label>Documento</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                        <input type="text" class="form-control" placeholder="Nombre" id="u_documento" name="u_documento">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Lugar de Expedicion</label>
-                        <input type="text" class="form-control" placeholder="Lugar de Expedicion" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="Lugar de Expedicion" id="u_lugar" name="u_lugar"> 
                       </div>
                     </div>
                   </div>
-
                     <!-- Direccion y Telefono -->
 
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Dirección</label>
-                        <input type="text" class="form-control" placeholder="Direccion de Residencia" id="direccion" name="direccion">
+                        <input type="text" class="form-control" placeholder="Direccion de Residencia" id="u_direccion" name="u_direccion">
                       </div>
                     </div>
 
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Teléfono</label>
-                        <input type="text" class="form-control" placeholder="#" id="Telefono" name="Telefono">
+                        <input type="text" class="form-control" placeholder="#" id="u_telefono" name="u_telefono">
                       </div>
                     </div>
                   </div>
@@ -215,7 +234,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Correo</label>
-                        <input type="text" class="form-control" placeholder="Email" id="correo" name="correo">
+                        <input type="text" class="form-control" placeholder="Email" id="u_correo" name="u_correo">
                       </div>
                     </div>
                   </div>
@@ -226,14 +245,14 @@
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Profesion</label>
-                        <input type="text" class="form-control"  placeholder="Profesion" id="Profesion" name="Profesion">
+                        <input type="text" class="form-control"  placeholder="Profesion" id="u_profesion" name="u_profesion">
                       </div>
                     </div>
                     
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Tiempo</label>
-                        <input type="email" class="form-control" placeholder="tiempo" id="tiempo" name="tiempo">
+                        <input type="email" class="form-control" placeholder="tiempo" id="u_tiempo" name="u_tiempo">
                       </div>
                     </div>
                   </div>
@@ -244,14 +263,14 @@
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Lugar de Trabajo</label>
-                        <input type="text" class="form-control"  placeholder="Nombre de la Empresa" id="lugarTra" name="lugarTra">
+                        <input type="text" class="form-control"  placeholder="Nombre de la Empresa" id="u_lugarTra" name="u_lugarTra">
                       </div>
                     </div>
                     
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Sueldo</label>
-                        <input type="email" class="form-control" placeholder="$" id="sueldo" name="sueldo">
+                        <input type="email" class="form-control" placeholder="$" id="u_sueldo" name="u_sueldo">
                       </div>
                     </div>
                   </div>
@@ -262,14 +281,13 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Observaciones</label>
-                        <textarea class="form-control textarea" id="observacion" name="observacion">Considere ingresar datos relevantes sobre el cliente</textarea>
+                        <textarea class="form-control textarea" id="u_observacion" name="u_observacion" placeholder="Considere ingresar datos relevantes sobre el cliente"></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
-                    </div>
+                    <a class="btn btn-primary btn-round" onclick="listar(1);">AÑADIR</a>
+                    
                   </div>
                 </form>
 
@@ -302,14 +320,29 @@
                    <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                        <label>Nombre 1</label>
+                        <input type="text" class="form-control" placeholder="Nombre" id="nombre1Con" name="nombre1Con">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Apellido</label>
-                        <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido"> 
+                        <label>Nombre 2</label>
+                        <input type="text" class="form-control" placeholder="Apellido" id="nombre2Con" name="nombre2Con"> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Apellido 1</label>
+                        <input type="text" class="form-control" placeholder="Perez, Martinez" id="apellido1Con" name="apellido1Conyugue">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Apellido 2</label>
+                        <input type="text" class="form-control" placeholder="Apellido" id="apellido2Con" name="apellido2Con"> 
                       </div>
                     </div>
                   </div>
@@ -318,13 +351,13 @@
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
                         <label>Cedula</label>
-                        <input type="text" class="form-control"  placeholder="Cedula" id="cedulaCony" name="empresa">
+                        <input type="text" class="form-control"  placeholder="Cedula" id="cedulaCon" name="cedulaCon">
                       </div>
                     </div>                    
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Profesion</label>
-                        <input type="email" class="form-control" placeholder="Profesion" id="profesionCony" name="profesionCony">
+                        <input type="email" class="form-control" placeholder="Profesion" id="profesionCon" name="profesionCon">
                       </div>
                     </div>
                      <div class="col-md-4 pl-1">
@@ -344,21 +377,22 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Observaciones</label>
-                        <textarea class="form-control textarea" id="observacion" name="observacion">Considere ingresar datos relevantes sobre el cliente</textarea>
+                        <textarea type="text" class="form-control textarea" id="observacionCony" name="observacionCony">Considere ingresar datos relevantes sobre el cliente</textarea>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <a class="btn btn-primary btn-round" onclick="listar();">REGISTRAR</a>
-                    </div>
-                  </div>
+                 <div class="update ml-auto mr-auto"><a class="btn btn-info btn-fill pull-right" data-toggle="tooltip" data-placement="left" title="Guardar Cliente" onclick="lista(1);">Registrar</a>
+                    
+                  </div> 
+                </form>
                           </div>
         </div>
-                </form>
+      </div>
+    </div>
+               
                 <!-- fin formulario -->
-              </div>
+              
               <div class="card-footer ">
                 <hr>
                 <div class="stats">                 
@@ -385,9 +419,7 @@
           </div>
         </div>
       </footer>
-    </div>
-  </div>
-</div>
+  
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -403,12 +435,68 @@
   <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-      demo.initChartsPages();
-    });
-  </script>
+  
+  <script type="text/javascript">  
+    var listar = function(accion){
+
+    var nombre1= $ ("#u_nombre1").val();
+    var nombre2 = $("#u_nombre2").val();
+    var apellido1 = $ ("#u_apellido1").val();
+    var apellido2 = $ ("#u_apellido2").val();
+    var documento= $ ("#u_documento").val();
+    var lugar = $ ("#u_lugar").val();
+    var direccion = $ ("#u_direccion").val();
+    var email = $ ("#u_correo").val();
+    var telefono = $ ("#u_telefono").val();
+    var profesion= $ ("#u_profesion").val();
+    var tiempo= $ ("#u_tiempo").val();
+    var lugarTrabajo= $ ("#u_lugarTra").val();
+    var sueldo= $ ("#u_sueldo").val();
+    var observaciones= $ ("#u_observaciones").val();
+
+
+      $.ajax({   
+       type: "POST",
+       url:"../control/insert_user.php",
+       data:{"insertar":accion,"u_nombre1":nombre1,"u_nombre2":nombre2, "u_apellido1":apellido1, "u_apellido2":apellido2, "u_documento":documento, "u_lugar":lugar, "u_direccion":direccion,"u_correo":email, "u_telefono":telefono,"u_profesion":profesion,"u_tiempo":tiempo,"u_lugarTra":lugarTrabajo,"u_sueldo":sueldo,"u_observaciones":observaciones},
+       success: function(notify){       
+     $('#notify').html(notify);
+              
+
+     }
+       
+     });}
+
+  
+   </script>
+
+   <script type="text/javascript">  
+    var lista = function(accion){
+
+    var nombre1C= $ ("#nombre1Con").val();
+    var nombre2C = $("#nombre2Con").val();
+    var apellido1C = $ ("#apellido1Con").val();
+    var apellido2C = $ ("#apellido2Con").val();
+    var cedula= $ ("#cedulaCony").val();
+    var domicilioC = $ ("#dia").val();
+    var profesionC= $ ("#profesionCon").val();
+    var observacionesC= $ ("#observacionCon").val();
+
+
+      $.ajax({   
+       type: "POST",
+       url:"../control/insert_family.php",
+       data:{"insertar":accion,"nombre1Con":nombre1C,"nombre2Con":nombre2C,"apellido1Con":apellido1C,"apellido2Con":apellido2C,"cedulaCony":cedula,"dia":domicilioC,"profesion":profesionCon,"observacionCon":observacionesC},
+       success: function(notify){       
+     $('#notify').html(notify);
+              alert(accion);
+
+     }
+       
+     });}
+
+  
+   </script>
 </body>
 
 </html>

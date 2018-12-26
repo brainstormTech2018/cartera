@@ -1,3 +1,7 @@
+
+<?php
+include('../config/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,13 +46,13 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="customers.html">
+            <a href="customers.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Cliente</p>
             </a>
          </li>
           <li class="active">
-            <a href="inventory.html">
+            <a href="inventory.php">
               <i class="nc-icon nc-box"></i>
               <p>Inventario</p>
             </a>
@@ -156,37 +160,37 @@
                     <div class="col-md-1 pr-1">
                       <div class="form-group">
                         <label>Cantidad</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="#" id="cantidad" name="cantidad"> 
                       </div>
                     </div>
                     <div class="col-md-2 pr-1">
                       <div class="form-group">
                         <label>Artículo</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="Clase de articulo" id="articulo" name="articulo"> 
                       </div>
                     </div>
                     <div class="col-md-2 pr-1">
                       <div class="form-group">
                         <label>Marca</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="marca" id="marca" name="marca"> 
                       </div>
                     </div>
                     <div class="col-md-2 pr-1">
                       <div class="form-group">
                         <label>Referencia</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="Referencia" id="referencia" name="referencia"> 
                       </div>
                     </div>
                     <div class="col-md-3 pr-1">
                       <div class="form-group">
                         <label>Serial</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="1815sd1515" id="serial" name="serial"> 
                       </div>
                     </div>
                     <div class="col-md-2 ">
                       <div class="form-group">
                         <label>Valor</label>
-                        <input type="text" class="form-control" placeholder="#" id="apellido" name="apellido"> 
+                        <input type="text" class="form-control" placeholder="$" id="valor" name="valor"> 
                       </div>
                     </div>
                   </div>
@@ -194,7 +198,7 @@
               
               <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <a class="btn btn-primary btn-round" onclick="listar();">AÑADIR</a>
+                  <a class="btn btn-primary btn-round" onclick="listar(1);">AÑADIR</a>
                 </div>
               </div>
             </div>
@@ -276,6 +280,35 @@
   <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+   <script type="text/javascript">  
+    var listar = function(accion){
+
+    var cantidadP = $ ("#cantidad").val();
+    var articuloP = $ ("#articulo").val();
+    var marcaP = $ ("#marca").val();
+    var referenciaP = $ ("#referencia").val();
+    var serialP = $ ("#serial").val();
+    var valorP = $ ("#valor").val();
+
+    
+
+
+
+
+      $.ajax({   
+       type: "POST",
+       url:"../control/insert_inventory.php",
+       data:{"insertar":accion,"cantidad":cantidadP,"articulo":articuloP, "marca":marcaP, "referencia":referenciaP, "serial":serialP, "valor":valorP},
+       success: function(notify){       
+     $('#notify').html(notify);
+              
+
+     }
+       
+     });}
+
+  
+   </script>
 </body>
 
 </html>
